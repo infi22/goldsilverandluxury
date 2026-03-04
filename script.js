@@ -107,7 +107,7 @@
 
 // ===== SCROLL REVEAL =====
 (function initScrollReveal() {
-    const elements = document.querySelectorAll('.price-card, .market-card');
+    const elements = document.querySelectorAll('.price-card, .market-card, .crypto-card');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, idx) => {
