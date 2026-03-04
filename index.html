@@ -1,648 +1,432 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gold Silver Rolex & Crypto | מחירון רולקס 2026 ● זהב ● כסף ● קריפטו</title>
-    <meta
-      name="description"
-      content="מחירון רולקס רשמי לשנת 2026, מחירי זהב וכסף בזמן אמת. Rolex MSRP 2026, Gold & Silver live prices."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- ===== GOLD PARTICLE CANVAS ===== -->
-    <canvas id="particles"></canvas>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Silver Rolex & Crypto | מחירון רולקס 2026 · זהב · כסף · קריפטו</title>
+    <meta name="description" content="מחירון רולקס רשמי 2026, מחירי זהב וכסף בזמן אמת, מטבעות קריפטו מובילים. Rolex MSRP, Gold, Silver & Crypto.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- ===== NAVIGATION ===== -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-inner">
-        <a href="#" class="logo">
-          <span class="logo-icon">♛</span>
-          <span class="logo-text"
-            >Gold Silver <span class="logo-accent">Rolex</span></span
-          >
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" id="nav">
+    <div class="nav__inner">
+        <a href="#" class="nav__logo">
+            <span class="node node--diamond"></span>
+            <span class="nav__logo-text">GOLD SILVER<span class="accent-brass"> ROLEX</span></span>
         </a>
-        <ul class="nav-links">
-          <li><a href="#hero">בית</a></li>
-          <li><a href="#rolex-prices">מחירון רולקס</a></li>
-          <li><a href="#market">זהב & כסף</a></li>
-          <li><a href="#crypto">קריפטו</a></li>
-          <li><a href="#contact">צור קשר</a></li>
+        <ul class="nav__links" id="navLinks">
+            <li><a href="#hero">בית</a></li>
+            <li><a href="#rolex">מחירון רולקס</a></li>
+            <li><a href="#metals">זהב & כסף</a></li>
+            <li><a href="#crypto">קריפטו</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
-          <span></span><span></span><span></span>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
         </button>
-      </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
-      <div class="hero-overlay"></div>
-      <img
-        src="hero_banner.png"
-        alt="Luxury Rolex Gold Silver"
-        class="hero-img"
-        loading="eager"
-      />
-      <div class="hero-content">
-        <p class="hero-tag">עדכון ינואר 2026</p>
-        <h1 class="hero-title">
-          מחירון <span class="gold-text">רולקס</span> רשמי
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+    <div class="hero__media">
+        <img src="hero_banner.png" alt="Luxury Rolex Gold Silver" class="hero__img" loading="eager">
+        <div class="hero__vignette"></div>
+    </div>
+    <div class="hero__content">
+        <div class="hero__tag">
+            <span class="node node--pulse"></span>
+            MSRP 2026
+        </div>
+        <h1 class="hero__title">
+            מחירון <span class="accent-pink">רולקס</span> רשמי
         </h1>
-        <p class="hero-sub">מחירים גלובליים ● זהב ● כסף ● קריפטו ● שעוני יוקרה</p>
-        <a href="#rolex-prices" class="btn-primary">לצפייה במחירון ↓</a>
-      </div>
-      <div class="hero-scroll-indicator">
-        <div class="scroll-line"></div>
-      </div>
-    </section>
+        <p class="hero__sub">מחירים גלובליים · זהב · כסף · קריפטו · שעוני יוקרה</p>
+        <a href="#rolex" class="btn btn--primary">
+            <span class="node node--arrow"></span>
+            לצפייה במחירון
+        </a>
+    </div>
+</section>
 
-    <!-- ===== LIVE TICKER ===== -->
-    <section class="ticker-bar">
-      <div class="ticker-inner">
-        <div class="ticker-item">
-          <span class="ticker-label">🪙 זהב (Spot)</span>
-          <span class="ticker-val gold-text">$5,190.80</span>
-          <span class="ticker-unit">/ אונקיה</span>
+<!-- ===== TICKER ===== -->
+<div class="ticker">
+    <div class="ticker__track">
+        <div class="ticker__item">
+            <span class="ticker__label">GOLD</span>
+            <span class="ticker__val accent-brass">$5,190.80</span>
         </div>
-        <div class="ticker-divider"></div>
-        <div class="ticker-item">
-          <span class="ticker-label">🥈 כסף (Spot)</span>
-          <span class="ticker-val silver-text">$85.65</span>
-          <span class="ticker-unit">/ אונקיה</span>
+        <span class="ticker__sep"></span>
+        <div class="ticker__item">
+            <span class="ticker__label">SILVER</span>
+            <span class="ticker__val" style="color: rgba(255,255,255,0.6);">$85.65</span>
         </div>
-        <div class="ticker-divider"></div>
-        <div class="ticker-item">
-          <span class="ticker-label">₪ זהב</span>
-          <span class="ticker-val gold-text">₪15,980</span>
-          <span class="ticker-unit">/ אונקיה</span>
+        <span class="ticker__sep"></span>
+        <div class="ticker__item">
+            <span class="ticker__label">BTC</span>
+            <span class="ticker__val accent-pink">$68,570</span>
         </div>
-        <div class="ticker-divider"></div>
-        <div class="ticker-item">
-          <span class="ticker-label">₪ כסף</span>
-          <span class="ticker-val silver-text">₪264</span>
-          <span class="ticker-unit">/ אונקיה</span>
+        <span class="ticker__sep"></span>
+        <div class="ticker__item">
+            <span class="ticker__label">ETH</span>
+            <span class="ticker__val accent-pink">$1,988</span>
         </div>
-        <div class="ticker-divider"></div>
-        <div class="ticker-item">
-          <span class="ticker-label">שער דולר</span>
-          <span class="ticker-val">1 USD ≈ 3.08 ILS</span>
+        <span class="ticker__sep"></span>
+        <div class="ticker__item">
+            <span class="ticker__label">SOL</span>
+            <span class="ticker__val accent-pink">$87.52</span>
         </div>
-        <div class="ticker-divider"></div>
-        <div class="ticker-item">
-          <span class="ticker-label">₿ BTC</span>
-          <span class="ticker-val crypto-text">$68,570</span>
+        <span class="ticker__sep"></span>
+        <div class="ticker__item">
+            <span class="ticker__label">USD/ILS</span>
+            <span class="ticker__val">3.08</span>
         </div>
-        <div class="ticker-divider"></div>
-        <div class="ticker-item">
-          <span class="ticker-label">Ξ ETH</span>
-          <span class="ticker-val crypto-text">$1,988</span>
-        </div>
-        <div class="ticker-divider"></div>
-        <div class="ticker-item">
-          <span class="ticker-label">◎ SOL</span>
-          <span class="ticker-val crypto-text">$87.52</span>
-        </div>
-      </div>
-    </section>
+    </div>
+</div>
 
-    <!-- ===== ROLEX PRICE SECTION ===== -->
-    <section class="section rolex-section" id="rolex-prices">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-tag">MSRP 2026</p>
-          <h2 class="section-title">
-            מחירון רולקס <span class="gold-text">רשמי</span>
-          </h2>
-          <p class="section-desc">
-            מחירים קמעונאיים בדולרים (USD) · עודכן ב־1 בינואר 2026 · דגמי בסיס
-            פלדת אל־חלד, אלא אם צוין אחרת
-          </p>
-        </div>
+<!-- ===== ROLEX PRICES ===== -->
+<section class="section" id="rolex">
+    <div class="container">
+        <header class="section__header">
+            <span class="section__index">01</span>
+            <h2 class="section__title">מחירון רולקס <span class="accent-brass">רשמי</span></h2>
+            <p class="section__desc">מחירים קמעונאיים בדולרים · עודכן ינואר 2026 · דגמי בסיס פלדת אל־חלד</p>
+        </header>
 
-        <div class="cards-grid">
-          <!-- Oyster Perpetual -->
-          <div class="price-card" data-aos="fade-up">
-            <div class="card-header">
-              <div class="card-icon">⌚</div>
-              <h3>Oyster Perpetual</h3>
-              <span class="card-badge">פלדת אל־חלד</span>
-            </div>
-            <ul class="card-prices">
-              <li>
-                <span class="model-name">Oyster Perpetual 28</span
-                ><span class="model-price">$6,200</span>
-              </li>
-              <li>
-                <span class="model-name">Oyster Perpetual 31</span
-                ><span class="model-price">$6,300</span>
-              </li>
-              <li>
-                <span class="model-name">Oyster Perpetual 34</span
-                ><span class="model-price">$6,400</span>
-              </li>
-              <li>
-                <span class="model-name">Oyster Perpetual 36</span
-                ><span class="model-price">$6,750</span>
-              </li>
-              <li>
-                <span class="model-name">Oyster Perpetual 41</span
-                ><span class="model-price">$7,050</span>
-              </li>
-            </ul>
-          </div>
+        <div class="grid grid--rolex">
 
-          <!-- Submariner -->
-          <div class="price-card" data-aos="fade-up">
-            <div class="card-header">
-              <div class="card-icon">🤿</div>
-              <h3>Submariner</h3>
-              <span class="card-badge popular">פופולרי</span>
-            </div>
-            <ul class="card-prices">
-              <li>
-                <span class="model-name">ללא תאריך (פלדה)</span
-                ><span class="model-price">$10,050</span>
-              </li>
-              <li>
-                <span class="model-name">Date (פלדה)</span
-                ><span class="model-price">$11,350</span>
-              </li>
-              <li>
-                <span class="model-name">Date (דו־גוני פלדה+זהב)</span
-                ><span class="model-price">$18,900</span>
-              </li>
-              <li>
-                <span class="model-name">Date (זהב מלא)</span
-                ><span class="model-price gold-text">מ־$49,600</span>
-              </li>
-            </ul>
-          </div>
+            <!-- Oyster Perpetual -->
+            <article class="card glass" data-reveal>
+                <div class="card__head">
+                    <span class="card__index">01</span>
+                    <h3 class="card__title">Oyster Perpetual</h3>
+                    <span class="card__badge">פלדה</span>
+                </div>
+                <ul class="card__list">
+                    <li><span>Oyster Perpetual 28</span><span class="card__price">$6,200</span></li>
+                    <li><span>Oyster Perpetual 31</span><span class="card__price">$6,300</span></li>
+                    <li><span>Oyster Perpetual 34</span><span class="card__price">$6,400</span></li>
+                    <li><span>Oyster Perpetual 36</span><span class="card__price">$6,750</span></li>
+                    <li><span>Oyster Perpetual 41</span><span class="card__price">$7,050</span></li>
+                </ul>
+            </article>
 
-          <!-- GMT-Master II -->
-          <div class="price-card" data-aos="fade-up">
-            <div class="card-header">
-              <div class="card-icon">🌍</div>
-              <h3>GMT-Master II</h3>
-              <span class="card-badge">קלאסי</span>
-            </div>
-            <ul class="card-prices">
-              <li>
-                <span class="model-name">פלדה / Oyster</span
-                ><span class="model-price">$11,800</span>
-              </li>
-              <li>
-                <span class="model-name">פלדה / Jubilee</span
-                ><span class="model-price">$12,000</span>
-              </li>
-              <li>
-                <span class="model-name">דו־גוני פלדה+זהב</span
-                ><span class="model-price">$19,950</span>
-              </li>
-              <li>
-                <span class="model-name">זהב מלא</span
-                ><span class="model-price gold-text">$48,400</span>
-              </li>
-            </ul>
-          </div>
+            <!-- Submariner -->
+            <article class="card glass" data-reveal>
+                <div class="card__head">
+                    <span class="card__index">02</span>
+                    <h3 class="card__title">Submariner</h3>
+                    <span class="card__badge card__badge--hot">פופולרי</span>
+                </div>
+                <ul class="card__list">
+                    <li><span>ללא תאריך (פלדה)</span><span class="card__price">$10,050</span></li>
+                    <li><span>Date (פלדה)</span><span class="card__price">$11,350</span></li>
+                    <li><span>Date (דו־גוני פלדה+זהב)</span><span class="card__price">$18,900</span></li>
+                    <li><span>Date (זהב מלא)</span><span class="card__price accent-brass">מ־$49,600</span></li>
+                </ul>
+            </article>
 
-          <!-- Cosmograph Daytona -->
-          <div class="price-card" data-aos="fade-up">
-            <div class="card-header">
-              <div class="card-icon">🏎️</div>
-              <h3>Cosmograph Daytona</h3>
-              <span class="card-badge popular">אייקוני</span>
-            </div>
-            <ul class="card-prices">
-              <li>
-                <span class="model-name">פלדה</span
-                ><span class="model-price">$16,900</span>
-              </li>
-              <li>
-                <span class="model-name">דו־גוני פלדה+זהב צהוב</span
-                ><span class="model-price">$24,000</span>
-              </li>
-              <li>
-                <span class="model-name">זהב צהוב מלא</span
-                ><span class="model-price gold-text">$52,600</span>
-              </li>
-            </ul>
-          </div>
+            <!-- GMT-Master II -->
+            <article class="card glass" data-reveal>
+                <div class="card__head">
+                    <span class="card__index">03</span>
+                    <h3 class="card__title">GMT-Master II</h3>
+                    <span class="card__badge">קלאסי</span>
+                </div>
+                <ul class="card__list">
+                    <li><span>פלדה / Oyster</span><span class="card__price">$11,800</span></li>
+                    <li><span>פלדה / Jubilee</span><span class="card__price">$12,000</span></li>
+                    <li><span>דו־גוני פלדה+זהב</span><span class="card__price">$19,950</span></li>
+                    <li><span>זהב מלא</span><span class="card__price accent-brass">$48,400</span></li>
+                </ul>
+            </article>
 
-          <!-- Datejust -->
-          <div class="price-card" data-aos="fade-up">
-            <div class="card-header">
-              <div class="card-icon">📅</div>
-              <h3>Datejust</h3>
-              <span class="card-badge">פלדה · בזל חלק · Oyster</span>
-            </div>
-            <ul class="card-prices">
-              <li>
-                <span class="model-name">Datejust 31</span
-                ><span class="model-price">$7,700</span>
-              </li>
-              <li>
-                <span class="model-name">Datejust 36</span
-                ><span class="model-price">$8,150</span>
-              </li>
-              <li>
-                <span class="model-name">Datejust 41</span
-                ><span class="model-price">$8,950</span>
-              </li>
-            </ul>
-            <p class="card-note">
-              💡 שדרוג Jubilee: +$200 · בזל זהב לבן: +$1,650–$2,700
-            </p>
-          </div>
+            <!-- Cosmograph Daytona -->
+            <article class="card glass" data-reveal>
+                <div class="card__head">
+                    <span class="card__index">04</span>
+                    <h3 class="card__title">Cosmograph Daytona</h3>
+                    <span class="card__badge card__badge--hot">אייקוני</span>
+                </div>
+                <ul class="card__list">
+                    <li><span>פלדה</span><span class="card__price">$16,900</span></li>
+                    <li><span>דו־גוני פלדה+זהב צהוב</span><span class="card__price">$24,000</span></li>
+                    <li><span>זהב צהוב מלא</span><span class="card__price accent-brass">$52,600</span></li>
+                </ul>
+            </article>
 
-          <!-- Explorer -->
-          <div class="price-card" data-aos="fade-up">
-            <div class="card-header">
-              <div class="card-icon">🏔️</div>
-              <h3>Explorer & Explorer II</h3>
-              <span class="card-badge">הרפתקנות</span>
-            </div>
-            <ul class="card-prices">
-              <li>
-                <span class="model-name">Explorer 36 (פלדה)</span
-                ><span class="model-price">$7,900</span>
-              </li>
-              <li>
-                <span class="model-name">Explorer 36 (דו־גוני)</span
-                ><span class="model-price">$14,250</span>
-              </li>
-              <li>
-                <span class="model-name">Explorer 40 (פלדה)</span
-                ><span class="model-price">$8,350</span>
-              </li>
-            </ul>
-          </div>
+            <!-- Datejust -->
+            <article class="card glass" data-reveal>
+                <div class="card__head">
+                    <span class="card__index">05</span>
+                    <h3 class="card__title">Datejust</h3>
+                    <span class="card__badge">פלדה · Oyster</span>
+                </div>
+                <ul class="card__list">
+                    <li><span>Datejust 31</span><span class="card__price">$7,700</span></li>
+                    <li><span>Datejust 36</span><span class="card__price">$8,150</span></li>
+                    <li><span>Datejust 41</span><span class="card__price">$8,950</span></li>
+                </ul>
+                <p class="card__note">שדרוג Jubilee: +$200 · בזל זהב לבן: +$1,650–$2,700</p>
+            </article>
 
-          <!-- Day-Date -->
-          <div class="price-card card-premium" data-aos="fade-up">
-            <div class="card-header">
-              <div class="card-icon">👑</div>
-              <h3>Day-Date</h3>
-              <span class="card-badge gold-badge">מתכות יקרות בלבד</span>
-            </div>
-            <ul class="card-prices">
-              <li>
-                <span class="model-name">Day-Date 36 (זהב צהוב)</span
-                ><span class="model-price gold-text">$43,700</span>
-              </li>
-              <li>
-                <span class="model-name">Day-Date 40 (זהב צהוב)</span
-                ><span class="model-price gold-text">$48,000</span>
-              </li>
-            </ul>
-            <p class="card-note">
-              💎 פלטינה / זהב ורוד / יהלומים — מחיר גבוה משמעותית
-            </p>
-          </div>
+            <!-- Explorer -->
+            <article class="card glass" data-reveal>
+                <div class="card__head">
+                    <span class="card__index">06</span>
+                    <h3 class="card__title">Explorer & Explorer II</h3>
+                    <span class="card__badge">הרפתקנות</span>
+                </div>
+                <ul class="card__list">
+                    <li><span>Explorer 36 (פלדה)</span><span class="card__price">$7,900</span></li>
+                    <li><span>Explorer 36 (דו־גוני)</span><span class="card__price">$14,250</span></li>
+                    <li><span>Explorer 40 (פלדה)</span><span class="card__price">$8,350</span></li>
+                </ul>
+            </article>
 
-          <!-- Sea-Dweller & Deepsea -->
-          <div class="price-card" data-aos="fade-up">
-            <div class="card-header">
-              <div class="card-icon">🌊</div>
-              <h3>Sea-Dweller & Deepsea</h3>
-              <span class="card-badge">צלילה מקצועית</span>
-            </div>
-            <ul class="card-prices">
-              <li>
-                <span class="model-name">Sea-Dweller (פלדה)</span
-                ><span class="model-price">$14,550</span>
-              </li>
-              <li>
-                <span class="model-name">Sea-Dweller (דו־גוני)</span
-                ><span class="model-price">$21,950</span>
-              </li>
-              <li>
-                <span class="model-name">Deepsea (פלדה)</span
-                ><span class="model-price">$15,550</span>
-              </li>
-              <li>
-                <span class="model-name">Deepsea (זהב מלא)</span
-                ><span class="model-price gold-text">$64,800</span>
-              </li>
-            </ul>
-          </div>
+            <!-- Day-Date -->
+            <article class="card glass card--premium" data-reveal>
+                <div class="card__head">
+                    <span class="card__index">07</span>
+                    <h3 class="card__title">Day-Date</h3>
+                    <span class="card__badge card__badge--gold">מתכות יקרות</span>
+                </div>
+                <ul class="card__list">
+                    <li><span>Day-Date 36 (זהב צהוב)</span><span class="card__price accent-brass">$43,700</span></li>
+                    <li><span>Day-Date 40 (זהב צהוב)</span><span class="card__price accent-brass">$48,000</span></li>
+                </ul>
+                <p class="card__note">פלטינה / זהב ורוד / יהלומים — מחיר גבוה משמעותית</p>
+            </article>
 
-          <!-- Sky-Dweller -->
-          <div class="price-card" data-aos="fade-up">
-            <div class="card-header">
-              <div class="card-icon">✈️</div>
-              <h3>Sky-Dweller</h3>
-              <span class="card-badge">מסעות</span>
-            </div>
-            <ul class="card-prices">
-              <li>
-                <span class="model-name">פלדה / Oyster</span
-                ><span class="model-price">$17,750</span>
-              </li>
-              <li>
-                <span class="model-name">דו־גוני</span
-                ><span class="model-price">$23,500</span>
-              </li>
-              <li>
-                <span class="model-name">זהב מלא / Oysterflex</span
-                ><span class="model-price gold-text">מ־$49,050</span>
-              </li>
-            </ul>
-          </div>
+            <!-- Sea-Dweller & Deepsea -->
+            <article class="card glass" data-reveal>
+                <div class="card__head">
+                    <span class="card__index">08</span>
+                    <h3 class="card__title">Sea-Dweller & Deepsea</h3>
+                    <span class="card__badge">צלילה מקצועית</span>
+                </div>
+                <ul class="card__list">
+                    <li><span>Sea-Dweller (פלדה)</span><span class="card__price">$14,550</span></li>
+                    <li><span>Sea-Dweller (דו־גוני)</span><span class="card__price">$21,950</span></li>
+                    <li><span>Deepsea (פלדה)</span><span class="card__price">$15,550</span></li>
+                    <li><span>Deepsea (זהב מלא)</span><span class="card__price accent-brass">$64,800</span></li>
+                </ul>
+            </article>
 
-          <!-- Air-King -->
-          <div class="price-card" data-aos="fade-up">
-            <div class="card-header">
-              <div class="card-icon">✈️</div>
-              <h3>Air-King</h3>
-              <span class="card-badge">טייסים</span>
-            </div>
-            <ul class="card-prices">
-              <li>
-                <span class="model-name">Air-King (פלדה)</span
-                ><span class="model-price">$8,150</span>
-              </li>
-            </ul>
-          </div>
+            <!-- Sky-Dweller -->
+            <article class="card glass" data-reveal>
+                <div class="card__head">
+                    <span class="card__index">09</span>
+                    <h3 class="card__title">Sky-Dweller</h3>
+                    <span class="card__badge">מסעות</span>
+                </div>
+                <ul class="card__list">
+                    <li><span>פלדה / Oyster</span><span class="card__price">$17,750</span></li>
+                    <li><span>דו־גוני</span><span class="card__price">$23,500</span></li>
+                    <li><span>זהב מלא / Oysterflex</span><span class="card__price accent-brass">מ־$49,050</span></li>
+                </ul>
+            </article>
+
+            <!-- Air-King -->
+            <article class="card glass" data-reveal>
+                <div class="card__head">
+                    <span class="card__index">10</span>
+                    <h3 class="card__title">Air-King</h3>
+                    <span class="card__badge">טייסים</span>
+                </div>
+                <ul class="card__list">
+                    <li><span>Air-King (פלדה)</span><span class="card__price">$8,150</span></li>
+                </ul>
+            </article>
+
         </div>
 
         <!-- Variations Note -->
-        <div class="variations-note">
-          <div class="note-icon">⚙️</div>
-          <p>
-            <strong>הערת וריאציות:</strong> לרולקס יש אלפי פרמוטציות. תוספת לוח
-            יהלומים, שינוי בזל, או החלפת צמיד (Oyster/Jubilee/President) ישנו את
-            המחיר. השתמשו בכלי "Configure" באתר
-            <a href="https://www.rolex.com" target="_blank" rel="noopener"
-              >rolex.com</a
-            >
-            למחיר מדויק.
-          </p>
+        <div class="callout glass" data-reveal>
+            <span class="node node--pillar"></span>
+            <p><strong>הערת וריאציות:</strong> לרולקס אלפי פרמוטציות. לוח יהלומים, שינוי בזל, או החלפת צמיד ישנו מחיר. השתמשו בכלי Configure באתר <a href="https://www.rolex.com" target="_blank" rel="noopener">rolex.com</a></p>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== GOLD & SILVER MARKET ===== -->
-    <section class="section market-section" id="market">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-tag">LIVE MARKET · מרץ 2026</p>
-          <h2 class="section-title">
-            מצב <span class="gold-text">הזהב</span> וה<span class="silver-text"
-              >כסף</span
-            >
-            בעולם
-          </h2>
-          <p class="section-desc">נתוני ספוט בזמן אמת · 4 במרץ 2026</p>
+<!-- ===== GOLD & SILVER ===== -->
+<section class="section section--dark" id="metals">
+    <div class="container">
+        <header class="section__header">
+            <span class="section__index">02</span>
+            <h2 class="section__title">מצב <span class="accent-brass">הזהב</span> והכסף בעולם</h2>
+            <p class="section__desc">נתוני ספוט · 4 במרץ 2026</p>
+        </header>
+
+        <div class="grid grid--metals">
+            <article class="metal-card glass" data-reveal>
+                <div class="metal-card__glow metal-card__glow--gold"></div>
+                <span class="metal-card__label">GOLD · זהב</span>
+                <div class="metal-card__price accent-brass">$5,190<span class="metal-card__decimal">.80</span></div>
+                <p class="metal-card__unit">לאונקיה (Troy Oz)</p>
+                <div class="metal-card__ils">≈ ₪15,980 לאונקיה</div>
+                <a href="https://www.kitco.com/charts" target="_blank" rel="noopener" class="metal-card__link">Kitco Live Chart</a>
+            </article>
+
+            <article class="metal-card glass" data-reveal>
+                <div class="metal-card__glow metal-card__glow--silver"></div>
+                <span class="metal-card__label">SILVER · כסף</span>
+                <div class="metal-card__price" style="color: rgba(255,255,255,0.7);">$85<span class="metal-card__decimal">.65</span></div>
+                <p class="metal-card__unit">לאונקיה (Troy Oz)</p>
+                <div class="metal-card__ils">≈ ₪264 לאונקיה</div>
+                <a href="https://www.kitco.com/charts/silver" target="_blank" rel="noopener" class="metal-card__link">Kitco Live Chart</a>
+            </article>
         </div>
+    </div>
+</section>
 
-        <div class="market-grid">
-          <div class="market-card gold-card">
-            <div class="market-glow"></div>
-            <div class="market-icon">🪙</div>
-            <h3>זהב · Gold</h3>
-            <div class="market-price">
-              $5,190<span class="decimals">.80</span>
-            </div>
-            <p class="market-unit">לאונקיה (Troy Oz)</p>
-            <div class="market-ils">≈ ₪15,980 <span>לאונקיה</span></div>
-            <a
-              href="https://www.kitco.com/charts"
-              target="_blank"
-              rel="noopener"
-              class="market-link"
-              >Kitco Live Chart →</a
-            >
-          </div>
+<!-- ===== CRYPTO ===== -->
+<section class="section" id="crypto">
+    <div class="container">
+        <header class="section__header">
+            <span class="section__index">03</span>
+            <h2 class="section__title">שוק ה<span class="accent-pink">קריפטו</span> העולמי</h2>
+            <p class="section__desc">מחירי מטבעות דיגיטליים מובילים · 4 במרץ 2026 · שווי שוק כולל: ~$2.25T</p>
+        </header>
 
-          <div class="market-card silver-card">
-            <div class="market-glow"></div>
-            <div class="market-icon">🥈</div>
-            <h3>כסף · Silver</h3>
-            <div class="market-price">$85<span class="decimals">.65</span></div>
-            <p class="market-unit">לאונקיה (Troy Oz)</p>
-            <div class="market-ils">≈ ₪264 <span>לאונקיה</span></div>
-            <a
-              href="https://www.kitco.com/charts/silver"
-              target="_blank"
-              rel="noopener"
-              class="market-link"
-              >Kitco Live Chart →</a
-            >
-          </div>
-        </div>
+        <div class="grid grid--crypto">
 
-        <p class="market-disclaimer">
-          ⚠️ המספרים זזים כל הזמן — התייחסו לזה כמו "מדחום חי" ולא חותמת נצח
-          🧪📈
-        </p>
-      </div>
-    </section>
+            <article class="crypto glass" data-reveal data-coin="btc">
+                <span class="crypto__rank">01</span>
+                <div class="crypto__head">
+                    <span class="crypto__node crypto__node--btc"></span>
+                    <div><h3>Bitcoin</h3><span class="crypto__sym">BTC</span></div>
+                </div>
+                <div class="crypto__price">$68,570<span class="crypto__dec">.60</span></div>
+                <div class="crypto__meta">
+                    <span class="crypto__tag">MCap: ~$1.4T</span>
+                    <span class="crypto__tag">דומיננטיות: ~58%</span>
+                </div>
+                <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank" rel="noopener" class="crypto__link">CoinGecko</a>
+            </article>
 
-    <!-- ===== CRYPTO MARKET SECTION ===== -->
-    <section class="section crypto-section" id="crypto">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-tag">CRYPTO MARKET · מרץ 2026</p>
-          <h2 class="section-title">שוק ה<span class="crypto-text">קריפטו</span> העולמי</h2>
-          <p class="section-desc">מחירי מטבעות דיגיטליים מובילים · 4 במרץ 2026 · שווי שוק כולל: ~$2.25T</p>
-        </div>
+            <article class="crypto glass" data-reveal data-coin="eth">
+                <span class="crypto__rank">02</span>
+                <div class="crypto__head">
+                    <span class="crypto__node crypto__node--eth"></span>
+                    <div><h3>Ethereum</h3><span class="crypto__sym">ETH</span></div>
+                </div>
+                <div class="crypto__price">$1,988<span class="crypto__dec">.00</span></div>
+                <div class="crypto__meta">
+                    <span class="crypto__change crypto__change--down">-2.6%</span>
+                </div>
+                <a href="https://www.coingecko.com/en/coins/ethereum" target="_blank" rel="noopener" class="crypto__link">CoinGecko</a>
+            </article>
 
-        <div class="crypto-grid">
+            <article class="crypto glass" data-reveal data-coin="bnb">
+                <span class="crypto__rank">03</span>
+                <div class="crypto__head">
+                    <span class="crypto__node crypto__node--bnb"></span>
+                    <div><h3>BNB</h3><span class="crypto__sym">BNB</span></div>
+                </div>
+                <div class="crypto__price">$631<span class="crypto__dec">.40</span></div>
+                <div class="crypto__meta">
+                    <span class="crypto__change crypto__change--neutral">ניטרלי</span>
+                </div>
+                <a href="https://www.coingecko.com/en/coins/bnb" target="_blank" rel="noopener" class="crypto__link">CoinGecko</a>
+            </article>
 
-          <!-- Bitcoin -->
-          <div class="crypto-card crypto-card-btc" data-aos="fade-up">
-            <div class="crypto-glow"></div>
-            <div class="crypto-rank">#1</div>
-            <div class="crypto-header">
-              <span class="crypto-icon">₿</span>
-              <div>
-                <h3>Bitcoin</h3>
-                <span class="crypto-symbol">BTC</span>
-              </div>
-            </div>
-            <div class="crypto-price">$68,570<span class="crypto-decimals">.60</span></div>
-            <div class="crypto-meta">
-              <span class="crypto-mcap">MCap: ~$1.4T</span>
-              <span class="crypto-dom">דומיננטיות: ~58%</span>
-            </div>
-            <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank" rel="noopener" class="crypto-link">CoinGecko →</a>
-          </div>
+            <article class="crypto glass" data-reveal data-coin="xrp">
+                <span class="crypto__rank">04</span>
+                <div class="crypto__head">
+                    <span class="crypto__node crypto__node--xrp"></span>
+                    <div><h3>XRP</h3><span class="crypto__sym">XRP</span></div>
+                </div>
+                <div class="crypto__price">$1<span class="crypto__dec">.37</span></div>
+                <div class="crypto__meta">
+                    <span class="crypto__change crypto__change--up">+5%</span>
+                    <span class="crypto__tag">MCap: ~$86.4B</span>
+                </div>
+                <a href="https://www.coingecko.com/en/coins/xrp" target="_blank" rel="noopener" class="crypto__link">CoinGecko</a>
+            </article>
 
-          <!-- Ethereum -->
-          <div class="crypto-card crypto-card-eth" data-aos="fade-up">
-            <div class="crypto-glow"></div>
-            <div class="crypto-rank">#2</div>
-            <div class="crypto-header">
-              <span class="crypto-icon">Ξ</span>
-              <div>
-                <h3>Ethereum</h3>
-                <span class="crypto-symbol">ETH</span>
-              </div>
-            </div>
-            <div class="crypto-price">$1,988<span class="crypto-decimals">.00</span></div>
-            <div class="crypto-meta">
-              <span class="crypto-change negative">▼ 2.6%</span>
-            </div>
-            <a href="https://www.coingecko.com/en/coins/ethereum" target="_blank" rel="noopener" class="crypto-link">CoinGecko →</a>
-          </div>
+            <article class="crypto glass" data-reveal data-coin="sol">
+                <span class="crypto__rank">05</span>
+                <div class="crypto__head">
+                    <span class="crypto__node crypto__node--sol"></span>
+                    <div><h3>Solana</h3><span class="crypto__sym">SOL</span></div>
+                </div>
+                <div class="crypto__price">$87<span class="crypto__dec">.52</span></div>
+                <div class="crypto__meta">
+                    <span class="crypto__change crypto__change--down">טרנד יורד</span>
+                </div>
+                <a href="https://www.coingecko.com/en/coins/solana" target="_blank" rel="noopener" class="crypto__link">CoinGecko</a>
+            </article>
 
-          <!-- BNB -->
-          <div class="crypto-card crypto-card-bnb" data-aos="fade-up">
-            <div class="crypto-glow"></div>
-            <div class="crypto-rank">#3</div>
-            <div class="crypto-header">
-              <span class="crypto-icon">◆</span>
-              <div>
-                <h3>BNB</h3>
-                <span class="crypto-symbol">BNB</span>
-              </div>
-            </div>
-            <div class="crypto-price">$631<span class="crypto-decimals">.40</span></div>
-            <div class="crypto-meta">
-              <span class="crypto-change neutral">● ניטרלי</span>
-            </div>
-            <a href="https://www.coingecko.com/en/coins/bnb" target="_blank" rel="noopener" class="crypto-link">CoinGecko →</a>
-          </div>
+            <article class="crypto glass" data-reveal data-coin="doge">
+                <span class="crypto__rank">06</span>
+                <div class="crypto__head">
+                    <span class="crypto__node crypto__node--doge"></span>
+                    <div><h3>Dogecoin</h3><span class="crypto__sym">DOGE</span></div>
+                </div>
+                <div class="crypto__price">$0<span class="crypto__dec">.0921</span></div>
+                <div class="crypto__meta">
+                    <span class="crypto__change crypto__change--neutral">מימ־קוין</span>
+                </div>
+                <a href="https://www.coingecko.com/en/coins/dogecoin" target="_blank" rel="noopener" class="crypto__link">CoinGecko</a>
+            </article>
 
-          <!-- XRP -->
-          <div class="crypto-card crypto-card-xrp" data-aos="fade-up">
-            <div class="crypto-glow"></div>
-            <div class="crypto-rank">#4</div>
-            <div class="crypto-header">
-              <span class="crypto-icon">✕</span>
-              <div>
-                <h3>XRP</h3>
-                <span class="crypto-symbol">XRP</span>
-              </div>
-            </div>
-            <div class="crypto-price">$1<span class="crypto-decimals">.37</span></div>
-            <div class="crypto-meta">
-              <span class="crypto-change positive">▲ 5%</span>
-              <span class="crypto-mcap">MCap: ~$86.4B</span>
-            </div>
-            <a href="https://www.coingecko.com/en/coins/xrp" target="_blank" rel="noopener" class="crypto-link">CoinGecko →</a>
-          </div>
+            <article class="crypto glass" data-reveal data-coin="ada">
+                <span class="crypto__rank">07</span>
+                <div class="crypto__head">
+                    <span class="crypto__node crypto__node--ada"></span>
+                    <div><h3>Cardano</h3><span class="crypto__sym">ADA</span></div>
+                </div>
+                <div class="crypto__price">$0<span class="crypto__dec">.262</span></div>
+                <div class="crypto__meta">
+                    <span class="crypto__change crypto__change--neutral">יציב</span>
+                </div>
+                <a href="https://www.coingecko.com/en/coins/cardano" target="_blank" rel="noopener" class="crypto__link">CoinGecko</a>
+            </article>
 
-          <!-- Solana -->
-          <div class="crypto-card crypto-card-sol" data-aos="fade-up">
-            <div class="crypto-glow"></div>
-            <div class="crypto-rank">#5</div>
-            <div class="crypto-header">
-              <span class="crypto-icon">◎</span>
-              <div>
-                <h3>Solana</h3>
-                <span class="crypto-symbol">SOL</span>
-              </div>
-            </div>
-            <div class="crypto-price">$87<span class="crypto-decimals">.52</span></div>
-            <div class="crypto-meta">
-              <span class="crypto-change negative">▼ טרנד יורד</span>
-            </div>
-            <a href="https://www.coingecko.com/en/coins/solana" target="_blank" rel="noopener" class="crypto-link">CoinGecko →</a>
-          </div>
-
-          <!-- Dogecoin -->
-          <div class="crypto-card crypto-card-doge" data-aos="fade-up">
-            <div class="crypto-glow"></div>
-            <div class="crypto-rank">#6</div>
-            <div class="crypto-header">
-              <span class="crypto-icon">🐕</span>
-              <div>
-                <h3>Dogecoin</h3>
-                <span class="crypto-symbol">DOGE</span>
-              </div>
-            </div>
-            <div class="crypto-price">$0<span class="crypto-decimals">.0921</span></div>
-            <div class="crypto-meta">
-              <span class="crypto-change neutral">● מימ־קוין</span>
-            </div>
-            <a href="https://www.coingecko.com/en/coins/dogecoin" target="_blank" rel="noopener" class="crypto-link">CoinGecko →</a>
-          </div>
-
-          <!-- Cardano -->
-          <div class="crypto-card crypto-card-ada" data-aos="fade-up">
-            <div class="crypto-glow"></div>
-            <div class="crypto-rank">#7</div>
-            <div class="crypto-header">
-              <span class="crypto-icon">◈</span>
-              <div>
-                <h3>Cardano</h3>
-                <span class="crypto-symbol">ADA</span>
-              </div>
-            </div>
-            <div class="crypto-price">$0<span class="crypto-decimals">.262</span></div>
-            <div class="crypto-meta">
-              <span class="crypto-change neutral">● יציב</span>
-            </div>
-            <a href="https://www.coingecko.com/en/coins/cardano" target="_blank" rel="noopener" class="crypto-link">CoinGecko →</a>
-          </div>
-
-          <!-- TRON -->
-          <div class="crypto-card crypto-card-trx" data-aos="fade-up">
-            <div class="crypto-glow"></div>
-            <div class="crypto-rank">#8</div>
-            <div class="crypto-header">
-              <span class="crypto-icon">◬</span>
-              <div>
-                <h3>TRON</h3>
-                <span class="crypto-symbol">TRX</span>
-              </div>
-            </div>
-            <div class="crypto-price">$0<span class="crypto-decimals">.2795</span></div>
-            <div class="crypto-meta">
-              <span class="crypto-change neutral">● יציב</span>
-            </div>
-            <a href="https://www.coingecko.com/en/coins/tron" target="_blank" rel="noopener" class="crypto-link">CoinGecko →</a>
-          </div>
+            <article class="crypto glass" data-reveal data-coin="trx">
+                <span class="crypto__rank">08</span>
+                <div class="crypto__head">
+                    <span class="crypto__node crypto__node--trx"></span>
+                    <div><h3>TRON</h3><span class="crypto__sym">TRX</span></div>
+                </div>
+                <div class="crypto__price">$0<span class="crypto__dec">.2795</span></div>
+                <div class="crypto__meta">
+                    <span class="crypto__change crypto__change--neutral">יציב</span>
+                </div>
+                <a href="https://www.coingecko.com/en/coins/tron" target="_blank" rel="noopener" class="crypto__link">CoinGecko</a>
+            </article>
 
         </div>
+    </div>
+</section>
 
-        <p class="market-disclaimer">⚠️ מחירי קריפטו תנודתיים ביותר ומשתנים מדי שנייה. המידע להתייחסות בלבד — לא המלצת השקעה. 📉📈</p>
-      </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer" id="contact">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <span class="logo-icon">♛</span>
-            <span class="logo-text"
-              >Gold Silver <span class="logo-accent">Rolex</span></span
-            >
-            <p class="footer-tagline">מידע · מחירים · שקיפות</p>
-          </div>
-          <div class="footer-links">
-            <a href="https://www.rolex.com" target="_blank" rel="noopener"
-              >Rolex Official</a
-            >
-            <a href="https://www.kitco.com" target="_blank" rel="noopener"
-              >Kitco</a
-            >
-            <a
-              href="https://wise.com/gb/currency-converter/usd-to-ils-rate"
-              target="_blank"
-              rel="noopener"
-              >Wise שערי מטבע</a
-            >
-          </div>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <span class="node node--diamond"></span>
+                <span class="nav__logo-text">GOLD SILVER<span class="accent-brass"> ROLEX</span></span>
+            </div>
+            <div class="footer__links">
+                <a href="https://www.rolex.com" target="_blank" rel="noopener">Rolex Official</a>
+                <a href="https://www.kitco.com" target="_blank" rel="noopener">Kitco</a>
+                <a href="https://www.coingecko.com" target="_blank" rel="noopener">CoinGecko</a>
+                <a href="https://wise.com/gb/currency-converter/usd-to-ils-rate" target="_blank" rel="noopener">Wise</a>
+            </div>
         </div>
-        <div class="footer-bottom">
-          <p>
-            © 2026 Gold Silver Rolex. כל הזכויות שמורות. המחירים להתייחסות בלבד.
-          </p>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Gold Silver Rolex. כל הזכויות שמורות. המחירים להתייחסות בלבד — לא המלצת השקעה.</p>
         </div>
-      </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="script.js"></script>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>
